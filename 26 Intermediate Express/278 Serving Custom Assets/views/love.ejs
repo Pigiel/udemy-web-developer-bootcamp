@@ -1,0 +1,9 @@
+<%- include("partials/header") %>
+<h1>You fell in love with: <%= thingVar.toUpperCase() %> </h1>
+<% if(thingVar.toLowerCase() === "jessica") { %>
+    <p>Good Choice!</p>
+<% } else { %>
+    <p>Bad Choice! You should said Jessica</p>
+<% } %>
+<p>P.S. This is the love.ejs file!</p>
+<%- include("partials/footer") %>

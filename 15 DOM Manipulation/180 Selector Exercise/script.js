@@ -1,0 +1,10 @@
+var idFirst = document.getElementById("first");
+console.log(idFirst);
+var queryIdFirst = document.querySelector("#first");
+console.log(queryIdFirst);
+var classSpecial = document.getElementsByClassName("special");
+console.log(classSpecial);
+var elementName = document.getElementsByTagName("p");
+console.log(elementName);
+var queryAll = document.querySelectorAll(".special");
+console.log(queryAll);

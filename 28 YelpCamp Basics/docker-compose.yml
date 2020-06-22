@@ -1,0 +1,13 @@
+version: "3"
+
+services: 
+  node: 
+    image: node
+    container_name: yelp-camp
+    working_dir: /home/node/app
+    volumes: 
+      - ./:/home/node/app
+    ports: 
+      - 80:80
+    # command: "npm install express ejs --save"
+    command: "npm start"

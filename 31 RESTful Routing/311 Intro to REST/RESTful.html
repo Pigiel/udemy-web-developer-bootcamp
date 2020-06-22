@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="RESTful.css">
+    <title>RESTful Routes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div class="jumbotron">
+                    <h1>RESTful Routes</h1>
+                    <p>A table of all 7 RESTful routes</p>
+                </div>
+
+                <table class="table table-dark table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Path</th>
+                            <th scope="col">HTTP Method</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Mongoose Method</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Index</td>
+                            <td>/blogs</td>
+                            <td>GET</td>
+                            <td>List all blog posts</td>
+                            <td>Blog.find()</td>
+                        </tr>
+                        <tr class="bg-success">
+                            <td>New</td>
+                            <td>/blogs/new</td>
+                            <td>GET</td>
+                            <td>Show form for the new blog</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr class="bg-success">
+                            <td>Create</td>
+                            <td>/blogs</td>
+                            <td>POST</td>
+                            <td>Create a new blog & then should redirect somewhere (e.g. /blogs)</td>
+                            <td>Dog.create()</td>
+                        </tr>
+                        <tr class="bg-info">
+                            <td>Show</td>
+                            <td>/blogs/:id</td>
+                            <td>GET</td>
+                            <td>Show info about one specific blog</td>
+                            <td>Dog.findById()</td>
+                        </tr>
+                        <tr class="bg-warning">
+                            <td>Edit</td>
+                            <td>/blogs/:id/edit</td>
+                            <td>GET</td>
+                            <td>Show form to edit one blog</td>
+                            <td>Dog.findById()</td>
+                        </tr>
+                        <tr class="bg-warning">
+                            <td>Update</td>
+                            <td>/blogs/:id</td>
+                            <td>PUT</td>
+                            <td>Update a particular blog & then should redirect somewhere (e.g. /blogs)</td>
+                            <td>Dog.findByIdAndUpdate()</td>
+                        </tr>
+                        <tr class="bg-danger">
+                            <td>Delete</td>
+                            <td>/blogs/:id</td>
+                            <td>DELETE</td>
+                            <td>Delete a particular blog & then should redirect somewhere (e.g. /blogs)</td>
+                            <td>Dog.findByIdAndRemove()</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

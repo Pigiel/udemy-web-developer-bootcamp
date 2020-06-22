@@ -1,0 +1,19 @@
+version: "3.3"
+
+services: 
+  node: 
+    image: node
+    restart: always
+    container_name: blog-app
+    working_dir: /home/node/app
+    volumes: 
+      - ./:/home/node/app
+    ports: 
+      - 80:80
+    # command: "npm install express ejs mongoose body-parser method-override --save"
+    command: "npm start"
+
+  mongo:
+    image: mongo
+    restart: always
+    container_name: blog-app-db

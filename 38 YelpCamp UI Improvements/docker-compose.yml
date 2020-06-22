@@ -1,0 +1,30 @@
+version: "3"
+
+services: 
+  node: 
+    image: node
+    restart: always
+    container_name: yelp-camp
+    working_dir: /home/node/app
+    environment: 
+      IP: 0.0.0.0
+      PORT: 80
+    volumes: 
+      - ./:/home/node/app
+    ports: 
+      - 80:80
+    # command: "npm install express ejs --save"
+    command: "npm start"
+
+  mongo:
+    image: mongo
+    restart: always
+    container_name: yelp-camp-db
+    # environment: 
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: change_me
+#     volumes: 
+#       - yelp-camp:/data/db
+
+# volumes: 
+#   yelp-camp:

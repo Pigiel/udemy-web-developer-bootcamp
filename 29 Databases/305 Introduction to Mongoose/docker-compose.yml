@@ -1,0 +1,25 @@
+version: "3.3"
+
+services: 
+  
+  node: 
+    image: node
+    restart: always
+    container_name: node
+    working_dir: /home/node/app
+    volumes: 
+      - ./:/home/node/app
+    ports: 
+      - 80:80
+    # command: "npm install mongoose --save"
+    command: "npm start"
+    depends_on: 
+      - mongo
+ 
+  mongo: 
+    image: mongo
+    restart: always
+    container_name: mongodb
+    # environment: 
+      # MONGO_INITDB_ROOT_USERNAME: root
+      # MONGO_INITDB_ROOT_PASSWORD: change_me

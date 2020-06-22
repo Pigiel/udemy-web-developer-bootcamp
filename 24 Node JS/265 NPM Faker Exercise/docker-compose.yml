@@ -1,0 +1,10 @@
+version: "3"
+
+services: 
+  node:
+    build: ./
+    image: node-faker
+    working_dir: /usr/src/app
+    volumes: 
+      - ./:/usr/src/app
+    command: node listProducts.js
